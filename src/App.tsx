@@ -26,7 +26,7 @@ function App() {
       const account = await fuel.currentAccount();
       const wallet = await fuel.getWallet(account);
       const contract = TokenContractAbi__factory.connect(
-        '0x2d87e944770f0c88aea643a7248c8f143df52eb15fada315fc2018b89b59e68f',
+        '0x8b112594e42fcba3f38f8947a2b6d25c0972233fd7b991b5451d6545dd6340fc',
         wallet
       );
 
@@ -34,16 +34,15 @@ function App() {
         contract.functions
           .mint_to_address(bn(100), {
             value: wallet.address.toB256(),
-          }, bn(100), ['LFG', 'LFG', 'LFG']),
+          }, bn(100)),
         contract.functions
           .mint_to_address(bn(100), {
             value: wallet.address.toB256(),
-          }, bn(100), ['ABC', 'ABC', 'ABC']),
+          }, bn(100)),
       ]);
 
       const txRequest = await invocation.getTransactionRequest();
 
-      debugger;
       fuel.sendTransaction(txRequest, { url: 'http://localhost:4000/graphql' }, wallet.address.bech32Address);
 
     } catch (err) {

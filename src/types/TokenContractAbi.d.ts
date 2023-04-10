@@ -28,7 +28,7 @@ interface TokenContractAbiInterface extends Interface {
     mint_to_address: FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: 'mint_to_address', values: [BigNumberish, AddressInput, BigNumberish, [string, string, string]]): Uint8Array;
+  encodeFunctionData(functionFragment: 'mint_to_address', values: [BigNumberish, AddressInput, BigNumberish]): Uint8Array;
 
   decodeFunctionData(functionFragment: 'mint_to_address', data: BytesLike): DecodedValue;
 }
@@ -36,6 +36,6 @@ interface TokenContractAbiInterface extends Interface {
 export class TokenContractAbi extends Contract {
   interface: TokenContractAbiInterface;
   functions: {
-    mint_to_address: InvokeFunction<[amount: BigNumberish, address: AddressInput, amount2: BigNumberish, city: [string, string, string]], void>;
+    mint_to_address: InvokeFunction<[amount: BigNumberish, address: AddressInput, amount2: BigNumberish], void>;
   };
 }

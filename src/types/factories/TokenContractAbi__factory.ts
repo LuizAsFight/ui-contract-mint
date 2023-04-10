@@ -23,42 +23,24 @@ const _abi = {
     },
     {
       "typeId": 1,
-      "type": "[_; 3]",
-      "components": [
-        {
-          "name": "__array_element",
-          "type": 3,
-          "typeArguments": null
-        }
-      ],
-      "typeParameters": null
-    },
-    {
-      "typeId": 2,
       "type": "b256",
       "components": null,
       "typeParameters": null
     },
     {
-      "typeId": 3,
-      "type": "str[3]",
-      "components": null,
-      "typeParameters": null
-    },
-    {
-      "typeId": 4,
+      "typeId": 2,
       "type": "struct Address",
       "components": [
         {
           "name": "value",
-          "type": 2,
+          "type": 1,
           "typeArguments": null
         }
       ],
       "typeParameters": null
     },
     {
-      "typeId": 5,
+      "typeId": 3,
       "type": "u64",
       "components": null,
       "typeParameters": null
@@ -69,22 +51,17 @@ const _abi = {
       "inputs": [
         {
           "name": "amount",
-          "type": 5,
+          "type": 3,
           "typeArguments": null
         },
         {
           "name": "address",
-          "type": 4,
+          "type": 2,
           "typeArguments": null
         },
         {
           "name": "amount2",
-          "type": 5,
-          "typeArguments": null
-        },
-        {
-          "name": "city",
-          "type": 1,
+          "type": 3,
           "typeArguments": null
         }
       ],
