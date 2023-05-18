@@ -1,6 +1,7 @@
 # RUN
 
-- deploy the contract `forc deploy --gas-price 1 --random-salt privatekey`
-- replace contractId in App.tsx
+- clone the repo
+- `pnpm install`
+- `pnpm start`
 - connect to wallet
 - click in mint
