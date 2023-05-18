@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["../../sdk/dist"]
+    "types": ["@fuel-wallet/sdk"]
   },
   "include": ["src", "src/types"]
 }

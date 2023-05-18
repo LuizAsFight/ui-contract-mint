@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const globalWindow = window as any;
+const globalWindow = window;
 
 export function useFuel() {
   const [error, setError] = useState('');
